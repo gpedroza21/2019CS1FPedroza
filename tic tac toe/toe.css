@@ -2,3 +2,16 @@
 body{
     background-color: black;
 }
+.topRow{
+    width:200px;
+    height:200px;
+    background-color: blue;
+    display: inline-block;
+    position:relative;
+    top:25%;
+    left:25%;
+
+}
+#border{
+    border-bottom-color:black
+}
