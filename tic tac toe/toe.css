@@ -2,15 +2,37 @@
 body{
     background-color: black;
 }
+.tictac{
+width:800px;
+height:800px;
+position:relative;
+overflow: hidden;
+top:25%;
+left:25%;
+}
 .topRow{
     width:200px;
     height:200px;
     background-color: blue;
     display: inline-block;
     position:relative;
-    top:25%;
-    left:25%;
-
+    overflow: hidden;
+}
+.middleRow{
+    width:200px;
+    height:200px;
+    background-color: blue;
+    display: inline-block;
+    position:relative;
+    overflow: hidden;
+}
+.bottomRow{
+    width:200px;
+    height:200px;
+    background-color: blue;
+    display: inline-block;
+    position:relative;
+    overflow: hidden;
 }
 #border{
     border-bottom-color:black
