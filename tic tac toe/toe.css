@@ -10,7 +10,8 @@ overflow: hidden;
 top:25%;
 left:25%;
 }
-.topRow{
+
+.box{
     width:200px;
     height:200px;
     background-color: blue;
@@ -18,22 +19,7 @@ left:25%;
     position:relative;
     overflow: hidden;
 }
-.middleRow{
-    width:200px;
-    height:200px;
-    background-color: blue;
-    display: inline-block;
-    position:relative;
-    overflow: hidden;
-}
-.bottomRow{
-    width:200px;
-    height:200px;
-    background-color: blue;
-    display: inline-block;
-    position:relative;
-    overflow: hidden;
-}
-#border{
+
+.border{
     border-bottom-color:black
 }
