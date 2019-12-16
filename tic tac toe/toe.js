@@ -1,4 +1,13 @@
-$(".box").click(function() {
-    $(".box").css("background-color", "white"); //If you do this with every click, any box that has changed color will reset to white
-    $(this).css("background-color", "red");  //You only need this one. 
+/*$(".box").click(function() {
+    $(this).css("background-color", "red");
+});*/
+
+$('.box').click(function() {
+  var clicks = $(this).css("background-color", "red");
+  if (clicks) { 
+     // odd clicks
+  } else {
+     // even clicks
+  }
+  $(this).css("background-color","white", !clicks);
 });
