@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+body{
+    background-color:blue;
+}
+.lights{
+    background-color:black;
+    width:120px;
+    height:300px;
+    border-radius:30px
+}
+.innerCircles{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    position:relative;
+    left:25px;
+}
+#Red{
+    background-color:red;
+    top:25px;
+   
+    }
+#Yellow{
+    background-color:#d1ce0d;
+    top:35px;
+}
+#Green{
+    background-color:green;
+    top:45px;
+}
+.myCar{
+    width:450px;
+    height:500px;
+    background: url('mustangRace.webp') no-repeat center center;
+    background-size:contain;
+    position:absolute;
+    top:200px;
+    
+}
+.playersCar{
+    width:400px;
+    height:500px;
+    background: url('camaroRace.png')no-repeat center center;
+    background-size:contain;
+    position:absolute;
+    top:400px;
+    left:25px;
+}
