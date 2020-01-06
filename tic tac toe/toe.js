@@ -17,7 +17,22 @@ $(".box").one("click",function() {
     }
     $(this).css("background-color",color);
     clicks++;
+    checkWinner(this);
 
 }
 
 );
+
+function checkWinner(clickedBox){
+    var rowClicked = $(clickedBox).attr('row');
+    console.log(rowClicked);
+    var rowElements = $("[row=" + rowClicked + "]");
+    $(rowElements).css('border','2px dotted #dad');
+
+    var colClicked = $(clickedBox).attr('col');
+    console.log(colClicked);
+    var colElements = $("[col=" + colClicked + "]");
+    $(colElements).css('border','2px dotted #dad');
+}
+
+
