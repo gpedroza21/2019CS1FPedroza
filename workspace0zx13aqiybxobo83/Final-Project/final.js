@@ -11,6 +11,6 @@ TweenMax.to(".image1",1,{opacity:0, delay:17});
 
 
 function playAudio(){
-    Audio.play();
-    
+Audio.play();
+alert("Mustangs are better than Camaros");
 }
