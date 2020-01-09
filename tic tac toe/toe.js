@@ -9,7 +9,7 @@ is evealuation the right condition.*/
 
 $(".box").one("click",function() {
     var color;
-    if (clicks%2==1) { // clicks should be a number that can be determined odd or even, the line above does not assign a number to clicks
+    if (clicks%2==1) { 
         color="red";
     }
     else{
@@ -36,20 +36,18 @@ function checkWinner(clickedBox){
     var total = 0;
     rowElements.each(
         function(){
-            if (color="background-color"){
-                
-            }
-            else{
-
-            }
+            var colorOfChosen = $(this).css("background-color",color);
+            console.log(colorOfChosen);
         }
     )
 
-
+    
     var colClicked = $(clickedBox).attr('col');
     console.log(colClicked);
     var colElements = $("[col=" + colClicked + "]");
     $(colElements).css('border','2px dotted #dad');
+
+
 }
 
    /* function calculateDiagonals(matrix){
@@ -72,4 +70,3 @@ i = 2 and j = 2;
 
 
 */
-
