@@ -1,0 +1,19 @@
+
+/*function centuryFromYear(year) {
+    return Math.ceil(year / 100)
+}
+
+console.log(centuryFromYear(1905));
+console.log(centuryFromYear(1700));
+{}
+*/
+
+
+function reverse(message)  {
+    var reverseString = "";
+    for (var i=message.lenghth-1; i>=0; i--){
+        reverseString =+ message.chartAt(i);
+}
+    return reverseString;
+}
+console.log (reverse("hello"))
