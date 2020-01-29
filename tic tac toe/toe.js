@@ -27,11 +27,17 @@ function checkWinner(clickedBox){
     var color = $(clickedBox).css("background-color");
     console.log(color);
 
+    var colClicked = $(clickedBox).attr('col');
+    console.log(colClicked);
+    var colElements = $("[col=" + colClicked + "]");
+    $(colElements).css('border','2px dotted #dad');
+
 
     var rowClicked = $(clickedBox).attr('row');
     console.log(rowClicked);
     var rowElements = $("[row=" + rowClicked + "]");
     $(rowElements).css('border','2px dotted #dad');
+      
 
     var total = 0;
     rowElements.each(
@@ -40,17 +46,12 @@ function checkWinner(clickedBox){
             console.log(colorOfChosen);
         }
     )
-
-    
-    var colClicked = $(clickedBox).attr('col');
-    console.log(colClicked);
-    var colElements = $("[col=" + colClicked + "]");
-    $(colElements).css('border','2px dotted #dad');
-
+   
+        
 
 }
 
-   /* function calculateDiagonals(matrix){
+   /*function calculateDiagonals(matrix){
     var n = matrix.length;
     for(var i=0; i<n; i++){
     for(var j=0; j<n; j++);
