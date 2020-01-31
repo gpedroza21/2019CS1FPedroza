@@ -71,3 +71,5 @@ i = 2 and j = 2;
 
 
 */
+String toe = " ";  // Indicating the place to put Server's IP
+s = new Socket(serverName, 10);
