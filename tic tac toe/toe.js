@@ -10,10 +10,10 @@ is evealuation the right condition.*/
 $(".box").one("click",function() {
     var color;
     if (clicks%2==1) { 
-        color="red";
+        color="white";
     }
     else{
-        color="white";
+        color="red";
     }
     $(this).css("background-color",color);
     clicks++;
@@ -30,22 +30,41 @@ function checkWinner(clickedBox){
     var colClicked = $(clickedBox).attr('col');
     console.log(colClicked);
     var colElements = $("[col=" + colClicked + "]");
-    $(colElements).css('border','2px dotted #dad');
+    
+    var total = 0;
+    colElements.each(
+        function(){
+            var colorOfChosen = $(this).css("background-color");
+            if (clickedBox=this){
+                total = 1;
+            }
+            else{
+                total++;
+            }
+                
+            
+            console.log(colorOfChosen);
+            
+        }
+    )
+
+    console.log(total);
 
 
+    /*total = 0;
     var rowClicked = $(clickedBox).attr('row');
     console.log(rowClicked);
     var rowElements = $("[row=" + rowClicked + "]");
     $(rowElements).css('border','2px dotted #dad');
-      
-
-    var total = 0;
+    
     rowElements.each(
         function(){
             var colorOfChosen = $(this).css("background-color",color);
             console.log(colorOfChosen);
         }
-    )
+    )*/
+
+    
    
         
 
@@ -71,5 +90,3 @@ i = 2 and j = 2;
 
 
 */
-String toe = " ";  // Indicating the place to put Server's IP
-s = new Socket(serverName, 10);
