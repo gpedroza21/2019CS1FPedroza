@@ -10,10 +10,10 @@ is evealuation the right condition.*/
 $(".box").one("click",function() {
     var color;
     if (clicks%2==1) { 
-        color="white";
+        color="red";
     }
     else{
-        color="red";
+        color="white";
     }
     $(this).css("background-color",color);
     clicks++;
@@ -35,14 +35,9 @@ function checkWinner(clickedBox){
     colElements.each(
         function(){
             var colorOfChosen = $(this).css("background-color");
-            if (clickedBox=this){
-                total = 1;
-            }
-            else{
-                total++;
-            }
-                
-            
+            if (colorOfChosen == color ){
+                total++
+            } 
             console.log(colorOfChosen);
             
         }
@@ -51,30 +46,29 @@ function checkWinner(clickedBox){
     console.log(total);
 
 
-    /*total = 0;
+    
     var rowClicked = $(clickedBox).attr('row');
     console.log(rowClicked);
     var rowElements = $("[row=" + rowClicked + "]");
-    $(rowElements).css('border','2px dotted #dad');
-    
+
+     total = 0;
     rowElements.each(
         function(){
-            var colorOfChosen = $(this).css("background-color",color);
+            var colorOfChosen = $(this).css("background-color");
+            if (colorOfChosen == color){
+                total++
+            }
             console.log(colorOfChosen);
         }
-    )*/
-
-    
-   
-        
-
+    )
+        console.log(total);
 }
 
-   /*function calculateDiagonals(matrix){
-    var n = matrix.length;
-    for(var i=0; i<n; i++){
-    for(var j=0; j<n; j++);
-    console.log(diagonal);
+/*function calculateDiagonals(matrix){
+var n = matrix.length;
+for(var i=0; i<n; i++){
+for(var j=0; j<n; j++);
+console.log(diagonal);
         }
     }
 
@@ -88,5 +82,4 @@ i = 2 and j = 0;
 i = 2 and j = 1;
 i = 2 and j = 2;
 
-
-*/
+*
