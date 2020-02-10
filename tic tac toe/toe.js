@@ -17,54 +17,59 @@ $(".box").one("click",function() {
     }
     $(this).css("background-color",color);
     clicks++;
-    checkWinner(this);
+    if(isWinner(this))
+        alert("You win");
 
 }
 
 );
 
-function checkWinner(clickedBox){
+function isWinner(clickedBox){
     var color = $(clickedBox).css("background-color");
     console.log(color);
 
     var colClicked = $(clickedBox).attr('col');
-    console.log(colClicked);
     var colElements = $("[col=" + colClicked + "]");
     
+   
     var total = 0;
     colElements.each(
         function(){
-            var colorOfChosen = $(this).css("background-color");
-            if (colorOfChosen == color ){
-                total++
-            } 
-            console.log(colorOfChosen);
-            
+            colorOfChosen = $(this).css("background-color")
+            if(colorOfChosen == color){
+                total++;
+            }
         }
     )
-
     console.log(total);
 
+    if(total == 3){
+        return true;
+    }
 
-    
     var rowClicked = $(clickedBox).attr('row');
-    console.log(rowClicked);
     var rowElements = $("[row=" + rowClicked + "]");
 
-     total = 0;
+    total = 0;
     rowElements.each(
         function(){
             var colorOfChosen = $(this).css("background-color");
             if (colorOfChosen == color){
                 total++
             }
-            console.log(colorOfChosen);
+            
         }
     )
-        console.log(total);
+    console.log(total);
+    
+    if(total == 3){
+        return true;
+    }
+
+    return false;
 }
 
-/*function calculateDiagonals(matrix){
+function calculateDiagonals(matrix){
 var n = matrix.length;
 for(var i=0; i<n; i++){
 for(var j=0; j<n; j++);
@@ -72,7 +77,7 @@ console.log(diagonal);
         }
     }
 
-i = 0 and j = 0;
+/*i = 0 and j = 0;
 i = 0 and j = 1;
 i = 0 and j = 2;
 i = 1 and j = 0;
@@ -81,5 +86,5 @@ i = 1 and j = 2;
 i = 2 and j = 0;
 i = 2 and j = 1;
 i = 2 and j = 2;
+*/
 
-*
