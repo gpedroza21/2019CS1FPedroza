@@ -7,14 +7,14 @@ width:800px;
 height:800px;
 position:relative;
 overflow: hidden;
-top:25%;
-left:25%;
+transform:translate(20%,20%);
+left: 25%
 }
 
 .box{
     width:200px;
     height:200px;
-    background-color: blue;
+    background-color: darkgray;
     display: inline-block;
     position:relative;
     overflow: hidden;

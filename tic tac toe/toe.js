@@ -10,7 +10,7 @@ is evealuation the right condition.*/
 $(".box").one("click",function() {
     var color;
     if (clicks%2==1) { 
-        color="red";
+        color="darkblue";
     }
     else{
         color="white";
@@ -70,21 +70,24 @@ function isWinner(clickedBox){
 }
 
 function calculateDiagonals(matrix){
-var n = matrix.length;
-for(var i=0; i<n; i++){
-for(var j=0; j<n; j++);
-console.log(diagonal);
+    var matrix = (0, 0) (0, 1) (0, 2);
+                (1, 0) (1, 1) (1, 2);
+                (2, 0) (2, 1) (2, 2)
+    var n = matrix.length;
+    var diag1 = 0;
+    var diag2 = 0;
+    for(var i=0; i<n; i++){
+        for(var j=0; j<n; j++){
+            // an element from the main diagonal
+            if(i === j) { 
+                diag1 += matrix[i][j];
+            }
+            // an element from the counterdiagonal
+            if(i + j === n - 1){
+                diag2 += matrix[i][j];
+            }
         }
     }
-
-/*i = 0 and j = 0;
-i = 0 and j = 1;
-i = 0 and j = 2;
-i = 1 and j = 0;
-i = 1 and j = 1;
-i = 1 and j = 2;
-i = 2 and j = 0;
-i = 2 and j = 1;
-i = 2 and j = 2;
-*/
-
+    return Math.abs(diag1 - diag2);
+    
+}
