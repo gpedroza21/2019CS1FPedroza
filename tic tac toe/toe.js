@@ -1,10 +1,4 @@
-/*$(".box").click(function() {
-    $(this).css("background-color", "red");
-});*/
-
-/* Good progress knowing you need an if statement. Just make sure that your if
-is evealuation the right condition.*/
-  var clicks = 0
+var clicks = 0
 
 
 $(".box").one("click",function() {
@@ -18,8 +12,8 @@ $(".box").one("click",function() {
     $(this).css("background-color",color);
     clicks++;
     if(isWinner(this))
-        alert("You win");
-
+        alert("You win")
+    
 }
 
 );
@@ -65,29 +59,45 @@ function isWinner(clickedBox){
     if(total == 3){
         return true;
     }
+    var d1Clicked = $(clickedBox).attr('d1');
+    var d1Elements = $("[d1" + d1Clicked + "]" )
 
-    return false;
-}
-
-function calculateDiagonals(matrix){
-    var matrix = (0, 0) (0, 1) (0, 2);
-                (1, 0) (1, 1) (1, 2);
-                (2, 0) (2, 1) (2, 2)
-    var n = matrix.length;
-    var diag1 = 0;
-    var diag2 = 0;
-    for(var i=0; i<n; i++){
-        for(var j=0; j<n; j++){
-            // an element from the main diagonal
-            if(i === j) { 
-                diag1 += matrix[i][j];
-            }
-            // an element from the counterdiagonal
-            if(i + j === n - 1){
-                diag2 += matrix[i][j];
-            }
+    total = 0
+    d1Elements.each(
+    function(){
+        var colorOfChosen = $(this).css("background-color");
+        if(colorOfChosen == color){
+            total++
         }
     }
-    return Math.abs(diag1 - diag2);
-    
+)
+console.log(total);
+if(total == 3){
+    return true;
 }
+var d2Clicked = $(clickedBox).attr('d2');
+var d2Elements = $("[d2" + d2Clicked + "]")
+
+total = 0
+d2Elements.each(
+    function(){
+        var colorOfChosen =$(this).css("background-color");
+        if(colorOfChosen == color){
+            total++
+        }
+    }
+)
+console.log(total);
+if(total == 3){
+    return true;
+}
+   
+    return false;
+    
+    if(total === 10){
+    alert("It's a tie");
+     
+
+}
+}
+
