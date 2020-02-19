@@ -12,8 +12,8 @@ $(".box").one("click",function() {
     $(this).css("background-color",color);
     clicks++;
     if(isWinner(this))
-        alert("You win")
-    
+        alert("You win");
+
 }
 
 );
@@ -91,13 +91,19 @@ console.log(total);
 if(total == 3){
     return true;
 }
-   
-    return false;
+   if(clicks == 9){
+       alert("tie")
+   }
     
-    if(total === 10){
-    alert("It's a tie");
-     
+    }
+    
 
-}
-}
+
+    /* 
+
+    change returnsssss -1, 0, 1
+        */
+
+
+
 
