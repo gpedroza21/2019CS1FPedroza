@@ -7,14 +7,16 @@ $(".box").one("click",function() {
         color="darkblue";
     }
     else{
-        color="white";
+        color="darkred";
     }
     $(this).css("background-color",color);
     clicks++;
     if(isWinner(this))
         alert("You win");
-
-}
+    else {
+        return -1
+    }
+    }
 
 );
 
@@ -38,7 +40,7 @@ function isWinner(clickedBox){
     console.log(total);
 
     if(total == 3){
-        return true;
+        return 1;
     }
 
     var rowClicked = $(clickedBox).attr('row');
@@ -57,7 +59,7 @@ function isWinner(clickedBox){
     console.log(total);
     
     if(total == 3){
-        return true;
+        return 1;
     }
     var d1Clicked = $(clickedBox).attr('d1');
     var d1Elements = $("[d1" + d1Clicked + "]" )
@@ -73,7 +75,7 @@ function isWinner(clickedBox){
 )
 console.log(total);
 if(total == 3){
-    return true;
+    return 1;
 }
 var d2Clicked = $(clickedBox).attr('d2');
 var d2Elements = $("[d2" + d2Clicked + "]")
@@ -89,21 +91,12 @@ d2Elements.each(
 )
 console.log(total);
 if(total == 3){
-    return true;
+    return 1;
 }
    if(clicks == 9){
        alert("tie")
+       return 0
    }
     
-    }
-    
-
-
-    /* 
-
-    change returnsssss -1, 0, 1
-        */
-
-
-
-
+}
+/* change returnsssss -1, 0, 1*/

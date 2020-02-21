@@ -1,20 +1,20 @@
 @CHARSET "UTF-8";
 body{
-    background-color: black;
+    background-color: transparent;
 }
 .tictac{
-width:800px;
-height:800px;
+width:650px;
+height:650px;
 position:relative;
 overflow: hidden;
-transform:translate(20%,20%);
-left: 25%
+top: 50px;
+left: 25%;
 }
 
 .box{
     width:200px;
     height:200px;
-    background-color: darkgray;
+    background-color: darkslategrey;
     display: inline-block;
     position:relative;
     overflow: hidden;
@@ -22,4 +22,15 @@ left: 25%
 
 .border{
     border-bottom-color:black
+}
+.winner{
+    width: 300px;
+    height: 400px;
+    background-color:darkred;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transform:translate(20%,20%);
+    left: 10%
+
 }
