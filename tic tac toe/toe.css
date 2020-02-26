@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 body{
-    background-color: transparent;
+    background: url('gtr2.jpg') no-repeat center center;
+    background-size:115%;
 }
 .tictac{
 width:650px;
@@ -8,7 +9,7 @@ height:650px;
 position:relative;
 overflow: hidden;
 top: 50px;
-left: 25%;
+left: 30%;
 }
 
 .box{
@@ -24,13 +25,21 @@ left: 25%;
     border-bottom-color:black
 }
 .winner{
-    width: 300px;
-    height: 400px;
-    background-color:darkred;
+    width: 400px;
+    height: 200px;
+    text-align:center;
+    line-height:175px;
+    font-size: 70px;
+    font-family:cursive ;
+    background-color:darkslateblue;
     display: inline-block;
-    position: relative;
-    overflow: hidden;
-    transform:translate(20%,20%);
-    left: 10%
+    position: absolute;
+    border-radius: 20px;
+    border-style:groove;
+    border-color:black;
+    top:30%;
+    left:17%;
+    opacity:0;
+    
 
 }

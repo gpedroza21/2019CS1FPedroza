@@ -97,6 +97,9 @@ if(total == 3){
        alert("tie")
        return 0
    }
-    
+
+
 }
+TweenMax.to(".winner", 1,{opacity:1 ,delay:3});
+TweenMax.to(".winner",1,{opacity:0, delay:17});
 /* change returnsssss -1, 0, 1*/
