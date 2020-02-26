@@ -2,20 +2,23 @@ var clicks = 0
 
 
 $(".box").one("click",function() {
-    var color;
-    if (clicks%2==1) { 
-        color="darkblue";
-    }
-    else{
-        color="darkred";
-    }
-    $(this).css("background-color",color);
-    clicks++;
-    if(isWinner(this))
-        alert("You win");
-    else {
-        return -1
-    }
+        var color;
+        if (clicks%2==1) { 
+            color="darkblue";
+        }
+        else{
+            color="darkred";
+        }
+        $(this).css("background-color",color);
+        clicks++;
+
+        var didWin = isWinner(this);
+
+        if( didWin == 1)
+        TweenMax.to(".winner", 1,{opacity:1});
+        else if(didWin == -1){
+        TweenMax.to(".tie", 1,{opacity:1});
+        }
     }
 
 );
@@ -94,12 +97,14 @@ if(total == 3){
     return 1;
 }
    if(clicks == 9){
-       alert("tie")
-       return 0
+       return -1;
    }
 
+     return 0;
 
 }
+
+/* change returnsssss -1, 0, 1
 TweenMax.to(".winner", 1,{opacity:1 ,delay:3});
 TweenMax.to(".winner",1,{opacity:0, delay:17});
-/* change returnsssss -1, 0, 1*/
+*/

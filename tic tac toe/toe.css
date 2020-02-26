@@ -37,9 +37,41 @@ left: 30%;
     border-radius: 20px;
     border-style:groove;
     border-color:black;
-    top:30%;
-    left:17%;
+    top:70%;
+    left:35%;
     opacity:0;
-    
-
+}
+.tie{
+    width: 400px;
+    height: 200px;
+    text-align:center;
+    line-height:175px;
+    font-size: 70px;
+    font-family:cursive ;
+    background-color:darkslateblue;
+    display: inline-block;
+    position: absolute;
+    border-radius: 20px;
+    border-style:groove;
+    border-color:black;
+    top:70%;
+    left:35%;
+    opacity:0;
+}
+.WinTie{
+    width: 400px;
+    height: 200px;
+    text-align:center;
+    line-height:175px;
+    font-size: 70px;
+    font-family:cursive ;
+    background-color:darkslateblue;
+    display: inline-block;
+    position: absolute;
+    border-radius: 20px;
+    border-style:groove;
+    border-color:black;
+    top:70%;
+    left:35%;
+    opacity:0;
 }
