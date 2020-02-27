@@ -19,6 +19,7 @@ $(".box").one("click",function() {
         else if(didWin == -1){
         TweenMax.to(".tie", 1,{opacity:1});
         }
+    
     }
 
 );
@@ -104,6 +105,13 @@ if(total == 3){
 
 }
 
+$(".restart").click(
+function(){
+    if(".restart" == click){
+        location.reload
+    }
+}
+)
 /* change returnsssss -1, 0, 1
 TweenMax.to(".winner", 1,{opacity:1 ,delay:3});
 TweenMax.to(".winner",1,{opacity:0, delay:17});

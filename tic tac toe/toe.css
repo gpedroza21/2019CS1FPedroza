@@ -32,7 +32,6 @@ left: 30%;
     font-size: 70px;
     font-family:cursive ;
     background-color:darkslateblue;
-    display: inline-block;
     position: absolute;
     border-radius: 20px;
     border-style:groove;
@@ -58,20 +57,14 @@ left: 30%;
     left:35%;
     opacity:0;
 }
-.WinTie{
-    width: 400px;
-    height: 200px;
-    text-align:center;
-    line-height:175px;
-    font-size: 70px;
-    font-family:cursive ;
-    background-color:darkslateblue;
-    display: inline-block;
-    position: absolute;
-    border-radius: 20px;
-    border-style:groove;
-    border-color:black;
+.restart{
+    width:100px;
+    height:30px;
+    background-color:darkcyan;
+    border-radius:20px;
+    display:inline-block;
+    overflow: hidden;
+    position:absolute;
     top:70%;
-    left:35%;
-    opacity:0;
+    left:75%;
 }
