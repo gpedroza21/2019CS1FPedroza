@@ -104,14 +104,9 @@ if(total == 3){
      return 0;
 
 }
-
-$(".restart").click(
-function(){
-    if(".restart" == click){
-        location.reload
-    }
-}
-)
+$(".restart").click (function(){
+        location.reload();
+});
 /* change returnsssss -1, 0, 1
 TweenMax.to(".winner", 1,{opacity:1 ,delay:3});
 TweenMax.to(".winner",1,{opacity:0, delay:17});
