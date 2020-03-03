@@ -24,23 +24,9 @@ left: 30%;
 .border{
     border-bottom-color:black
 }
-.winner{
-    width: 400px;
-    height: 200px;
-    text-align:center;
-    line-height:175px;
-    font-size: 70px;
-    font-family:cursive ;
-    background-color:darkslateblue;
-    position: absolute;
-    border-radius: 20px;
-    border-style:groove;
-    border-color:black;
-    top:70%;
-    left:35%;
-    opacity:0;
-}
-.tie{
+
+
+.resultBox{
     width: 400px;
     height: 200px;
     text-align:center;
@@ -57,6 +43,7 @@ left: 30%;
     left:35%;
     opacity:0;
 }
+
 .restart{
     width:100px;
     height:30px;
@@ -70,9 +57,8 @@ left: 30%;
     text-align:center;
     line-height:30px;
     font-size:20px;
-    cursor:grab;
+    cursor:pointer;
 }
-
 .restart:hover{
     background-color:darkcyan
 }

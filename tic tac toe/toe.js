@@ -14,10 +14,13 @@ $(".box").one("click",function() {
 
         var didWin = isWinner(this);
 
-        if( didWin == 1)
-        TweenMax.to(".winner", 1,{opacity:1});
+        if( didWin == 1){
+            $('.resultMessage').text('');
+            TweenMax.to(".resultBox", 1,{opacity:1});
+        }
         else if(didWin == -1){
-        TweenMax.to(".tie", 1,{opacity:1});
+
+            TweenMax.to(".resultBox", 1,{opacity:1});
         }
     
     }
