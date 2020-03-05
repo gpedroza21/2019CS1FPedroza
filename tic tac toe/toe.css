@@ -62,3 +62,9 @@ left: 30%;
 .restart:hover{
     background-color:darkcyan
 }
+#resultMessage{
+    text-align:center;
+    line-height:175px;
+    font-size: 70px;
+    font-family:cursive;
+}

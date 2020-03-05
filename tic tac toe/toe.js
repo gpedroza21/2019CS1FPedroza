@@ -15,12 +15,13 @@ $(".box").one("click",function() {
         var didWin = isWinner(this);
 
         if( didWin == 1){
-            $('.resultMessage').text('');
             TweenMax.to(".resultBox", 1,{opacity:1});
+            $('#resultMessage').text("You Win!");
+            clicks : "off"
         }
         else if(didWin == -1){
-
             TweenMax.to(".resultBox", 1,{opacity:1});
+            $('#resultMessage').text("Its A Tie");
         }
     
     }
