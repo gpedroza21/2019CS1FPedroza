@@ -17,3 +17,7 @@ $('.boxes').click(
 )
     }
 )
+
+/*
+make a new folder and attempt to write code again
+*/
