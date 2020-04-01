@@ -17,7 +17,7 @@ $(".box").one("click",function() {
         if( didWin == 1){
             TweenMax.to(".resultBox", 1,{opacity:1});
             $('#resultMessage').text("You Win!");
-            clicks : "off"
+        
         }
         else if(didWin == -1){
             TweenMax.to(".resultBox", 1,{opacity:1});
